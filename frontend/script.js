@@ -3,8 +3,8 @@
 
   fetchButton.addEventListener('click', async () => {
       try {
-          const res = await axios.get('http://localhost:8000/cgi-bin/script.cgi');
-          outputMessage.innerText = `${res.data}`;
+          const response = await axios.get('http://localhost:8000/cgi-bin/script.cgi');
+          outputMessage.innerText = `${response.data}`;
       } catch (error) {
           console.error('Error:', error);
           outputMessage.innerText = 'Failed to fetch data';
